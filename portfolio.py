@@ -72,19 +72,24 @@ class Portfolio:
     to the Portfolio.
     """
     def __init__(self, portfolioSet, weights):
+        """
+        Parameters:
+        -----------
+        portfolioSet : A PortfolioSet object.
+        weights : A list of weights to be assigned to each asset.
+        """
         self.portSet = portfolioSet
-        self.weights = weights
+        self.w = 0
+        self.setWeights(weights)
 
     def setWeights(self, weights):
         """
         Assigns weight to each asset of the Portfolio.
         """
-        if(self._validateWeights(weights)):
-            self.weights = np.array(weights)
-        
-    def _validateWeights(self ,weights):
         try:
             if (np.sum(weights) == 1.0):
+                self.w = np.array(weights)
+            else:
                 raise
         except:
             print("Weights don't add up to 1.0")
@@ -94,7 +99,7 @@ class Portfolio:
         Calculates and returns the net Portfolio Returns.
         """
         mu = np.array(self.portSet.dReturns.mean())
-        self.returns = np.sum(self.weights*mu)
+        self.returns = np.sum(self.w*mu)
         return self.returns
 
     def getPortRisk(self ):
@@ -102,7 +107,7 @@ class Portfolio:
         Calculates and returns the net Portfolio Risk.
         """
         cov = self.portSet.dReturns.cov()
-        self.risk = np.dot(self.weights.T,np.dot(cov,self.weights))
+        self.risk = np.dot(self.w.T,np.dot(cov,self.w))
         return self.risk
 
     def printInfo(self ):
@@ -112,7 +117,7 @@ class Portfolio:
         """
         table1 = PrettyTable(field_names=["Tickers","Weights"],header= True)
         for i in range(0,len(self.portSet.tickers)):
-            table1.add_row([self.portSet.tickers[i],self.weights[i]])
+            table1.add_row([self.portSet.tickers[i],self.w[i]])
         print(table1)
 
         table2 = PrettyTable(field_names= ["Portfolio Return","Portfolio Risk"],header=True)
