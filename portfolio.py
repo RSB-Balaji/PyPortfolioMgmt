@@ -21,6 +21,8 @@ class PortfolioSet:
         tickers (list) : A list of ticker symbols(str) of stocks.
         """
         self.tickers = tickers
+        self.portMeans = []
+        self.portStd = []
 
     def getDailyReturns(self, startDate, endDate):
         """
@@ -41,6 +43,15 @@ class PortfolioSet:
         Plots Returns of all stocks in the Portfolio set.
         """
         self.dReturns.plot()
+
+    def _getListPortMeans(self ):
+        """
+        Returns List of Mean returns of each asset in Portfolio set.
+        """
+        return list(self.dReturns.mean())
+
+    def _getListPortStd(self ):
+        return list(self.dReturns.std())
 
     def plotRetDist(self, ticker, bins):
         """
