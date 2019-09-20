@@ -130,5 +130,6 @@ f.fitModel(ticker ="PG")
 ```
 
 ### Workflow
+![](flowdiag.png)
 
 ### Future work
