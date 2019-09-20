@@ -8,13 +8,13 @@ PyPortfolioMgmt is designed by keeping in mind the perspective of a **reasercher
 analyse multiple factors that contribute to fluctuations in asset prices.
 
 ## Table of contents
-- [Table of contents](https://github.com/RSB-Balaji/PyPortfolioMgmt/new/master?readme=1#table-of-contents)
-- [Getting started](https://github.com/RSB-Balaji/PyPortfolioMgmt/new/master?readme=1#getting-started)
-- [An overview of portfolio management](https://github.com/RSB-Balaji/PyPortfolioMgmt/new/master?readme=1#an-overview-of-portfolio-management)
-- [Factor theory](https://github.com/RSB-Balaji/PyPortfolioMgmt/new/master?readme=1#factor-theory)
-- [Capital Asset Pricing Model](https://github.com/RSB-Balaji/PyPortfolioMgmt/new/master?readme=1#capital-asset-pricing-model)
-- [Multi-Factor Model](https://github.com/RSB-Balaji/PyPortfolioMgmt/new/master?readme=1#multi-factor-model)
-- [Future work](https://github.com/RSB-Balaji/PyPortfolioMgmt/new/master?readme=1#future-work)
+- [Table of contents](https://github.com/RSB-Balaji/PyPortfolioMgmt/tree/readme#table-of-contents)
+- [Getting started](https://github.com/RSB-Balaji/PyPortfolioMgmt/tree/readme#getting-started)
+- [An overview of portfolio management](https://github.com/RSB-Balaji/PyPortfolioMgmt/tree/readme#an-overview-of-portfolio-management)
+- [Factor theory](https://github.com/RSB-Balaji/PyPortfolioMgmt/tree/readme#factor-theory)
+- [Capital Asset Pricing Model](https://github.com/RSB-Balaji/PyPortfolioMgmt/tree/readme/#capital-asset-pricing-model)
+- [Multi-Factor Model](https://github.com/RSB-Balaji/PyPortfolioMgmt/tree/readme#multi-factor-model)
+- [Future work](https://github.com/RSB-Balaji/PyPortfolioMgmt/tree/readme#future-work)
 
 ### Getting started
 For installation,
