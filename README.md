@@ -15,7 +15,6 @@ analyse multiple factors that contribute to fluctuations in asset prices.
 - [Capital Asset Pricing Model](https://github.com/RSB-Balaji/PyPortfolioMgmt/tree/readme/#capital-asset-pricing-model)
 - [Multi-Factor Model](https://github.com/RSB-Balaji/PyPortfolioMgmt/tree/readme#multi-factor-model)
 - [Workflow](https://github.com/RSB-Balaji/PyPortfolioMgmt/tree/readme#workflow)
-- [Future work](https://github.com/RSB-Balaji/PyPortfolioMgmt/tree/readme#future-work)
 
 ### Getting started
 For installation,
@@ -132,5 +131,3 @@ f.fitModel(ticker ="PG")
 
 ### Workflow
 ![](flowdiag.png)
-
-### Future work
