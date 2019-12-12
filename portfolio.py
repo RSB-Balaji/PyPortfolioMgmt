@@ -3,10 +3,11 @@ from datetime import datetime as dt
 import numpy as np 
 import scipy.stats as stats
 import pandas as pd 
-from pandas_datareader import data
+
 import matplotlib.pyplot as plt
 import statsmodels.api as sm
 
+import yfinance as yf
 from prettytable import PrettyTable
 
 class PortfolioSet:
@@ -32,8 +33,8 @@ class PortfolioSet:
         """
         self.startDate = startDate
         self.endDate = endDate
-
-        price = data.DataReader(self.tickers,'yahoo',self.startDate,self.endDate)['Adj Close']
+        
+        price = yf.download(stock,startDate,endDate)
         self.dReturns = pd.DataFrame(np.log(price)-np.log(price).shift(1),index=price.index)
         self.dReturns.columns = self.tickers
         self.dReturns.dropna(inplace  = True)
@@ -98,7 +99,7 @@ class Portfolio:
         Assigns weight to each asset of the Portfolio.
         """
         try:
-            if (np.sum(weights) == 1.0):
+            if (round(np.sum(weights)) == 1.0):
                 self.w = np.array(weights)
             else:
                 raise

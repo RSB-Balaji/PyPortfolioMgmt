@@ -8,6 +8,7 @@ import statsmodels.api as sm
 
 from portfolio import PortfolioSet
 from portfolio import Portfolio
+from portfolio import _getFromQuandl
 
 class Capm:
 	"""
@@ -61,7 +62,7 @@ class Capm:
 		self.__sOptPort = _sd[maxSharpeRatioIdx]
 		self.__maxSharpeRatio = _sr[maxSharpeRatioIdx]
 		self.__wOptPort = _weights[maxSharpeRatioIdx]
-
+		print(self.__wOptPort)
 		self.optPort = Portfolio(self.portSet, self.__wOptPort)
 		self.optPort.printInfo()
 		self._plotEfficientFrontier(_mu, _sd)
@@ -152,25 +153,25 @@ class Capm:
 		"""
 		st = pd.DataFrame(self.portSet.dReturns[ticker])
 
-		sp500 = data.DataReader('^GSPC','yahoo',self.portSet.startDate,self.portSet.endDate)['Adj Close']
+		sp500 = _getFromQuandl('SPY',self.portSet.startDate, self.portSet.endDate)
 		sp500 = pd.DataFrame((np.log(sp500) - np.log(sp500).shift()), index =sp500.index)
 		sp500.dropna(inplace =True)
 
 		X = sp500.values
 		Y = st.values
 
-		X_ = sm.add_constant(X)
+		#X_ = sm.add_constant(X)
 		
-		model = sm.OLS(Y - self.riskFreeRate, X_).fit()
+		#model = sm.OLS(Y - self.riskFreeRate, X_).fit()
 
-		X2 = np.linspace(X.min(),X.max(),100)
-		Y_h = X2*model.params[1] + model.params[0]
-		print(model.summary())
+		#X2 = np.linspace(X.min(),X.max(),100)
+		#Y_h = X2*model.params[1] + model.params[0]
+		#print(model.summary())
 
-		plt.figure()
-		plt.scatter(X,Y,alpha =0.3)
-		plt.plot(X2,Y_h,'r',alpha =1)
-		plt.xlabel("S&P500")
-		plt.ylabel(ticker)
-		plt.title("Security Market Line")
-		plt.show()
+		#plt.figure()
+		#plt.scatter(X,Y,alpha =0.3)
+		#plt.plot(X2,Y_h,'r',alpha =1)
+		#plt.xlabel("S&P500")
+		#plt.ylabel(ticker)
+		#plt.title("Security Market Line")
+		#plt.show()
