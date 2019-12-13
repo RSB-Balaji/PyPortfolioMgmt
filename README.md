@@ -4,7 +4,7 @@ PyPortfolioMgmt is a library that implements concepts of **multi-factor** model 
 It aims to indentify, capture and relate the factors to asset prices, and use this information to 
 build portfolios.
 
-PyPortfolioMgmt is designed by keeping in mind the perspective of a **reasercher** who wants to study and
+PyPortfolioMgmt is designed by keeping in mind the perspective of a **researcher** who wants to study and
 analyse multiple factors that contribute to fluctuations in asset prices.
 
 ## Table of contents
