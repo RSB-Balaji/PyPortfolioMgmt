@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
 	long_description = fh.read()
 
 setuptools.setup(
-	name="pyportmgt",
+	name="pyportmgmt",
 	version="0.0.1",
 	author="Srinivasa Balaji",
 	author_email="rsbbalaji19@gmail.com",
