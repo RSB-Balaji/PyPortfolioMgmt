@@ -73,7 +73,7 @@ Functions of CAPM supported by the package,
 from datetime import datetime as dt
 
 from pyportmgmt.portfolio import PortfolioSet
-from pyportmgmt.portfolio imoprt Portfolio
+from pyportmgmt.portfolio import Portfolio
 from pyportmgmt.capm import Capm
 
 # start date and end dates of daily returns for portfolioSet
