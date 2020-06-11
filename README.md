@@ -20,7 +20,7 @@ analyse multiple factors that contribute to fluctuations in asset prices.
 For installation,
 
 ```
-pip install pyportmgt
+pip install pyportmgmt
 ```
 ### An overview of portfolio management
 Portfolio Management is the art and science of combining assets with different expected returns and 
@@ -72,9 +72,9 @@ Functions of CAPM supported by the package,
 ```python
 from datetime import datetime as dt
 
-from pyportmgt import PortfolioSet
-from pyportmgt imoprt Portfolio
-from pyportmgt import Capm
+from pyportmgmt import PortfolioSet
+from pyportmgmt imoprt Portfolio
+from pyportmgmt import Capm
 
 # start date and end dates of daily returns for portfolioSet
 startDate = dt(2018,1,1)
@@ -108,9 +108,9 @@ A quick example
 ```python
 from datetime import datetime as dt
 
-from pyportmgt import PortfolioSet
-from pyportmgt imoprt Portfolio
-from pyportmgt import FamaFrench
+from pyportmgmt import PortfolioSet
+from pyportmgmt imoprt Portfolio
+from pyportmgmt import FamaFrench
 
 # start date and end dates of daily returns for portfolioSet
 startDate = dt(2018,1,1)
