@@ -72,9 +72,9 @@ Functions of CAPM supported by the package,
 ```python
 from datetime import datetime as dt
 
-from pyportmgmt import PortfolioSet
-from pyportmgmt imoprt Portfolio
-from pyportmgmt import Capm
+from pyportmgmt.portfolio import PortfolioSet
+from pyportmgmt.portfolio imoprt Portfolio
+from pyportmgmt.capm import Capm
 
 # start date and end dates of daily returns for portfolioSet
 startDate = dt(2018,1,1)
@@ -108,9 +108,9 @@ A quick example
 ```python
 from datetime import datetime as dt
 
-from pyportmgmt import PortfolioSet
-from pyportmgmt imoprt Portfolio
-from pyportmgmt import FamaFrench
+from pyportmgmt.portfolio import PortfolioSet
+from pyportmgmt.portfolio imoprt Portfolio
+from pyportmgmt.famafrench import FamaFrench
 
 # start date and end dates of daily returns for portfolioSet
 startDate = dt(2018,1,1)
