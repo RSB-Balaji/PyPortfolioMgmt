@@ -20,7 +20,7 @@ analyse multiple factors that contribute to fluctuations in asset prices.
 For installation,
 
 ```
-pip install pyportmgt     #not ready yet
+pip install pyportmgt
 ```
 ### An overview of portfolio management
 Portfolio Management is the art and science of combining assets with different expected returns and 
